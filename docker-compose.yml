@@ -1,0 +1,13 @@
+services:
+  target:
+    build:
+      context: .
+      dockerfile: Dockerfile.target
+    ports:
+      - "3000:1323"
+  attacker:
+    build:
+      context: .
+      dockerfile: Dockerfile.attacker
+    ports:
+      - "3001:1323"
